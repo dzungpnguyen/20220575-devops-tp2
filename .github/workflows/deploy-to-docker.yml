@@ -15,7 +15,7 @@ jobs:
       run: |
         ls
         pwd
-        docker run --rm -i hadolint/hadolint < Dockerfile
+        docker run --rm -i hadolint/hadolint < ./Dockerfile
     - name: Build Docker image
       run: docker build -t dzung17/devops-tp2:0.0.1 .
     - name: Log in to Docker Hub
