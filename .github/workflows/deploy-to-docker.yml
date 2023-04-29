@@ -14,7 +14,7 @@ jobs:
     - name: Run Hadolint
       run: docker run --rm -i hadolint/hadolint < ./Dockerfile
     - name: Build Docker image
-      run: docker build -t dzung17/devops-tp2:0.0.1 .
+      run: docker build -t dzung17/devops-tp2:0.0.2 .
     - name: Log in to Docker Hub
       uses: docker/login-action@v1
       with:
@@ -22,4 +22,4 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
     - name: Push Docker image
       run: |
-        docker push dzung17/devops-tp2:0.0.1
+        docker push dzung17/devops-tp2:0.0.2

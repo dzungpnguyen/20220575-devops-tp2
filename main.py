@@ -1,10 +1,7 @@
 import requests
 from requests.exceptions import RequestException
 import os
-from dotenv import load_dotenv
 from flask import Flask, request, jsonify
-
-load_dotenv()
 
 app = Flask(__name__)
 

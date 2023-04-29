@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-RUN apk --no-cache add hadolint
+# RUN apk --no-cache add hadolint
 
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get upgrade -yq && \
@@ -9,7 +9,7 @@ RUN apt-get update && \
 
 COPY main.py .
 
-RUN pip3 install --trusted-host pypi.python.org requests python-dotenv flask
+RUN pip3 install --trusted-host pypi.python.org requests flask
 
 EXPOSE 8081
 
