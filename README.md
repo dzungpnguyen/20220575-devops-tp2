@@ -7,7 +7,7 @@
 ### Running the docker image:
 1. In your 1st terminal, run:
 ```
-docker run -p 8081:8081 --env API_KEY=<your-api-key> dzung17/devops-tp2:0.0.1
+docker run -p 8081:8081 --env API_KEY=<your-api-key> dzung17/devops-tp2:0.0.2
 ```
 2. In your 2nd terminal, run:
 ```
