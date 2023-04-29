@@ -102,5 +102,5 @@ jobs:
 Après la modificaion, le workflow ne marche plus.
 
 ### Bonus 2 : Aucune données sensibles stockées dans l'image ou le code source
-- Openweather API est stocké dans une variable d'environnment et est appeler par `--env` option.
-- Docker hub credentials sont stockés dans les secrets du Github.
+- Openweather API est stocké dans une variable d'environnment et est appelé par `--env` option.
+- Docker hub credentials sont stockés dans les secrets d'environnement du Github.
