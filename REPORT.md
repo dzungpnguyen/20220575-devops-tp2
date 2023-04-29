@@ -84,3 +84,22 @@ Dans le 2e terminal :
 ```
 curl "http://localhost:8081/?lat=<your-latitude>&lon=<your-longitude>"
 ```
+
+## Bonus
+
+### Bonus 1 : Add hadolint to Github workflow before build+push and failed on errors
+La modification est dans le fichier ./github/workflows/deploy-to-docker.yml :
+```
+jobs:
+  build-and-push-image:
+    runs-on: ubuntu-latest
+    steps:
+    # checkout code
+    - name: Run Hadolint
+      run: docker run --rm -i hadolint/hadolint < ./Dockerfile
+    # run, login and push
+```
+
+### Bonus 2 : Aucune données sensibles stockées dans l'image ou le code source
+- Openweather API est stocké dans une variable d'environnment et est appeler par `--env` option.
+- Docker hub credentials sont stockés dans les secrets du Github.
