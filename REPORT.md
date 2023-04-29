@@ -99,6 +99,7 @@ jobs:
       run: docker run --rm -i hadolint/hadolint < ./Dockerfile
     # run, login and push
 ```
+Après la modificaion, le workflow ne marche plus.
 
 ### Bonus 2 : Aucune données sensibles stockées dans l'image ou le code source
 - Openweather API est stocké dans une variable d'environnment et est appeler par `--env` option.
